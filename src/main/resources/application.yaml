@@ -11,5 +11,5 @@ spring:
 app:
   jwt:
     secret-key: "VGhpcyBteSBzZWNyZXQga2V5IGZvciBBcHBsaWNhdGlvbi4gUGxlYXNlIGNoYW5nZSBpbiBwcm9kdWN0aW"
-    validity-time: 60000
-#    validity-time: 300000
+#    validity-time: 60000
+    validity-time: 300000

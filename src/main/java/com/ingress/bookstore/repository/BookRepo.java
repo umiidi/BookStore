@@ -81,7 +81,7 @@ public class BookRepo {
     }
 
     public void delete(int id) {
-        String query = "delete from books where id = id, :id)";
+        String query = "delete from books where id = :id";
         try {
             bookJdbcTemplate.update(
                     query,

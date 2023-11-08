@@ -10,15 +10,4 @@ public class BookStoreApplication {
         SpringApplication.run(BookStoreApplication.class, args);
     }
 
-
 }
-
-/*
-                1) Istifadəçilərin qeydiyyatı və girişi
-                2) Tələbələr girib kitabları oxuya bilər
-                3) Authorlar kitab yarada bilər
-                4) Kitabın bütün oxuyucularını əldə etmək
-       5) Tələbələrin indi oxuduqları kitabların listini
-                6) Authorlar öz kitablarını silə bilər
-                7) Tələbələr müəllifə abunə ola bilir
- */

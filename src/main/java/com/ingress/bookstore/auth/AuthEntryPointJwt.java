@@ -17,8 +17,8 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException)
             throws IOException, ServletException {
-        log.error("XETA: Unauthorized error: {}", authException.getMessage());
-        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "XETA: Error on auth");
+        log.error("Unauthorized error: {}", authException.getMessage());
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Error on auth");
     }
 
 }

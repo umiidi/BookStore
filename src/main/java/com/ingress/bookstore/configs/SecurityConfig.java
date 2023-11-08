@@ -47,12 +47,11 @@ public class SecurityConfig {
 
                         .antMatchers(HttpMethod.GET, "/api/v1/book/{id}").authenticated()
                         .antMatchers(HttpMethod.GET, "/api/v1/book/readers/{id}").authenticated()
+
                         .antMatchers(HttpMethod.POST, "/api/v1/book").hasAuthority(Authority.AUTHOR.name())
+                        .antMatchers(HttpMethod.DELETE, "/api/v1/book/{id}").hasAuthority(Authority.AUTHOR.name())
 
                         .antMatchers("/api/v1/student/**").hasAuthority(Authority.STUDENT.name())
-
-                        .antMatchers(HttpMethod.POST, "/api/v1/book").hasAuthority(Authority.AUTHOR.name())
-                        .antMatchers(HttpMethod.DELETE, "/api/v1/book/{id}").hasAnyRole(Authority.AUTHOR.name())
                 )
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class)
                 .httpBasic(withDefaults());

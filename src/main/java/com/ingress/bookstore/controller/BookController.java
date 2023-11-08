@@ -30,15 +30,15 @@ public class BookController {
     }
 
     @PostMapping()
-    public void createBook(@RequestBody BookRequest bookRequest) {
+    public BaseResponse<Void> createBook(@RequestBody BookRequest bookRequest) {
         bookService.createBook(bookRequest);
-        BaseResponse.success();
+        return BaseResponse.success();
     }
 
     @DeleteMapping("/{id}")
-    public void deleteBook(@PathVariable int id) {
+    public BaseResponse<Void> deleteBook(@PathVariable int id) {
         bookService.deleteBook(id);
-        BaseResponse.success();
+        return BaseResponse.success();
     }
 
 }
