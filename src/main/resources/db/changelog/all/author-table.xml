@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="author-table" author="umiidi">
+        <createTable tableName="author">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(50)" />
+            <column name="user_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="INT" />
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="author"
+                baseColumnNames="user_id"
+                constraintName="fk_author_user_id"
+                referencedTableName="user"
+                referencedColumnNames="id"
+                onDelete="NO ACTION"
+                onUpdate="NO ACTION" />
+    </changeSet>
+
+</databaseChangeLog>
