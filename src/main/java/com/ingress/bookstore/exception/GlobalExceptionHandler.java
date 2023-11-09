@@ -43,14 +43,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 
-//    @ExceptionHandler(RuntimeException.class)
-//    public ResponseEntity<?> handleException(RuntimeException ex) {
-//        var error = new ErrorResponse(
-//                UUID.randomUUID(),
-//                HttpStatus.SEE_OTHER,
-//                ex.getMessage(),
-//                LocalDateTime.now());
-//        return ResponseEntity.status(HttpStatus.SEE_OTHER).body(error);
-//    }
-
 }
